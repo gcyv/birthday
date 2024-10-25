@@ -298,3 +298,14 @@ h1.bounce {
 }
 
 
+/* Media query for larger screens */
+@media (min-width: 768px) {
+    .images-section {
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+    .message {
+        max-width: 600px;
+    }
+}
