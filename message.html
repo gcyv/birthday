@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Happy Birthday Cake!</title>
+</head>
+<body>
+    <nav>
+        <a href="home.html"><i class="fas fa-arrow-left"></i></a>
+    </nav>
+    <div class="cake-container">
+        <div class="cake">
+            <div class="cake-layer layer1"></div>
+            <div class="cake-layer layer2"></div>
+            <div class="cake-layer layer3"></div>
+            <div class="cream"></div> <!-- Cream on top of the cake -->
+            <div class="candle" onclick="lightCandle()"> <!-- Candle on the cream -->
+                <div class="candle-body"></div>
+                <div class="flame" id="flame"></div>
+            </div>
+        </div>
+        <div class="message" id="message">Make a wish and <br>click the fire to blow the fire!</div> <!-- Message element -->
+    </div>
+    <button>
+        <a href="heart.html">Next</a>
+    </button>
+
+    <script>
+        function lightCandle() {
+            const flame = document.getElementById('flame');
+            const message = document.getElementById('message');
+            flame.style.display = 'none'; // Hide the flame when clicked
+            message.textContent = 'Your wish will be fulfilled!'; // Change the message
+        }
+    </script>
+</body>
+</html>

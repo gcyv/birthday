@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="love-question-container">
+        <h1>Do You Love Me?</h1>
+        <img src="icegif-572.gif" alt="gif" style="height: 50%; width: 50%;">
+        <div class="button-container">
+            <button class="yes-button" onclick="goToHomePage()">Yes</button>
+            <button class="no-button">No</button>
+        </div>
+    </div>
+
+    <script>
+        const noButton = document.querySelector('.no-button');
+
+        // Make the No button move away when hovered
+        noButton.addEventListener('mouseover', () => {
+            const randomX = Math.floor(Math.random() * window.innerWidth);
+            const randomY = Math.floor(Math.random() * window.innerHeight);
+            noButton.style.position = 'absolute';
+            noButton.style.left = `${randomX}px`;
+            noButton.style.top = `${randomY}px`;
+        });
+
+        // Redirect to the homepage when Yes is clicked
+        function goToHomePage() {
+            window.location.href = 'home.html';  // Change 'homepage.html' to your actual homepage file
+        }
+    </script>
+</body>
+</html>

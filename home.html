@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Happy Birthday!</title>
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <a href="question.html"><i class="fas fa-arrow-left"></i></a>
+    </nav>
+    
+    <div class="birthday-container">
+        <h1 id="birthday-text"></h1>
+        
+        <button>
+            <a href="message.html">Enter</a>
+        </button>
+    </div>
+
+    <script>
+        // Message to be displayed one letter at a time
+        const text = "HAPPY BIRTHDAY LOVE (PEMA YUDEN)!!\n";
+        let i = 0;
+
+        function typeText() {
+            if (i < text.length) {
+                // Add each character one by one
+                document.getElementById("birthday-text").innerHTML += text.charAt(i);
+                i++;
+                setTimeout(typeText, 100);  // Adjust the speed by changing 100 (in milliseconds)
+            }
+        }
+
+        // Call the typing function after page load
+        window.onload = function() {
+            typeText();
+        }
+    </script>
+</body>
+</html>
